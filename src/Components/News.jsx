@@ -109,7 +109,7 @@ export class News extends Component {
                     >
                         {this.state.articles.map((element) => {
                             return <div className="col-md-4 childDiv" key={element.url}>
-                                <NewsItem title={element.title} description={element.description} imageUrl={element.urlToImage} newsUrl={element.url} source={element.source.name}/>
+                                <NewsItem title={element.title} description={element.description} imageUrl={element.urlToImage} newsUrl={element.url} source={element.source.name} />
                             </div>
                         })}
                     </InfiniteScroll>
