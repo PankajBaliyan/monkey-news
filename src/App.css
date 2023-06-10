@@ -32,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -39,21 +40,23 @@
 
 
 /* custom css  */
-#parentDiv {
+.infinite-scroll-component {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .childDiv {
-  flex-basis: 23%; /* Set width to 25% for 4 div's in each row */
+  flex-basis: 23%;
+  /* Set width to 25% for 4 div's in each row */
   box-sizing: border-box;
   padding: 10px;
 }
 
 .newsTitle {
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* Number of lines to show */
+  -webkit-line-clamp: 3;
+  /* Number of lines to show */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -61,12 +64,13 @@
 
 .newsDescription {
   display: -webkit-box;
-  -webkit-line-clamp: 5; /* Number of lines to show */
+  -webkit-line-clamp: 5;
+  /* Number of lines to show */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.dropdown-item{
+.dropdown-item {
   text-transform: capitalize;
 }
