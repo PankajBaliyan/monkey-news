@@ -3,6 +3,8 @@ import Header from '../Components/NavBar'
 import News from '../Components/News'
 import About from '../Components/About'
 
+let pageSizeHere = 5
+
 const router = createBrowserRouter([
     {
         path: "/",
@@ -10,7 +12,7 @@ const router = createBrowserRouter([
             <div>
                 <Header />
                 <News
-                    pageSize={5}
+                    pageSize={pageSizeHere}
                     country="in"
                     category="science"
                     apiKey="dbc4762db84e44b4b6df7d41c90332ea"
@@ -37,7 +39,7 @@ const router = createBrowserRouter([
             <div>
                 <Header />
                 <News
-                    pageSize={5}
+                    pageSize={pageSizeHere}
                     country="in"
                     category="business"
                     apiKey="dbc4762db84e44b4b6df7d41c90332ea"
@@ -53,7 +55,7 @@ const router = createBrowserRouter([
             <div>
                 <Header />
                 <News
-                    pageSize={5}
+                    pageSize={pageSizeHere}
                     country="in"
                     category="entertainment"
                     apiKey="dbc4762db84e44b4b6df7d41c90332ea"
@@ -69,7 +71,7 @@ const router = createBrowserRouter([
             <div>
                 <Header />
                 <News
-                    pageSize={5}
+                    pageSize={pageSizeHere}
                     country="in"
                     category="general"
                     apiKey="dbc4762db84e44b4b6df7d41c90332ea"
@@ -85,7 +87,7 @@ const router = createBrowserRouter([
             <div>
                 <Header />
                 <News
-                    pageSize={5}
+                    pageSize={pageSizeHere}
                     country="in"
                     category="health"
                     apiKey="dbc4762db84e44b4b6df7d41c90332ea"
@@ -101,7 +103,7 @@ const router = createBrowserRouter([
             <div>
                 <Header />
                 <News
-                    pageSize={5}
+                    pageSize={pageSizeHere}
                     country="in"
                     category="science"
                     apiKey="dbc4762db84e44b4b6df7d41c90332ea"
@@ -117,7 +119,7 @@ const router = createBrowserRouter([
             <div>
                 <Header />
                 <News
-                    pageSize={5}
+                    pageSize={pageSizeHere}
                     country="in"
                     category="sports"
                     apiKey="dbc4762db84e44b4b6df7d41c90332ea"
@@ -134,7 +136,7 @@ const router = createBrowserRouter([
             <div>
                 <Header />
                 <News
-                    pageSize={5}
+                    pageSize={pageSizeHere}
                     country="in"
                     category="technology"
                     apiKey="dbc4762db84e44b4b6df7d41c90332ea"
