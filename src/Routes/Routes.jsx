@@ -1,9 +1,13 @@
+import * as React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Header from '../Components/NavBar'
 import News from '../Components/News'
 import About from '../Components/About'
 
-let pageSizeHere = 5
+// Default Variables
+let pageSizeHere = 10
+let apiKey = process.env.REACT_APP_API_KEY
+let country = "in"
 
 const router = createBrowserRouter([
     {
@@ -13,9 +17,9 @@ const router = createBrowserRouter([
                 <Header />
                 <News
                     pageSize={pageSizeHere}
-                    country="in"
+                    country={country}
                     category="science"
-                    apiKey="dbc4762db84e44b4b6df7d41c90332ea"
+                    apiKey={apiKey}
                     key="science"
                 />
             </div>
@@ -40,9 +44,9 @@ const router = createBrowserRouter([
                 <Header />
                 <News
                     pageSize={pageSizeHere}
-                    country="in"
+                    country={country}
                     category="business"
-                    apiKey="dbc4762db84e44b4b6df7d41c90332ea"
+                    apiKey={apiKey}
                     key="business"
                 />
             </div>
@@ -56,9 +60,9 @@ const router = createBrowserRouter([
                 <Header />
                 <News
                     pageSize={pageSizeHere}
-                    country="in"
+                    country={country}
                     category="entertainment"
-                    apiKey="dbc4762db84e44b4b6df7d41c90332ea"
+                    apiKey={apiKey}
                     key="entertainment"
                 />
             </div>
@@ -72,9 +76,9 @@ const router = createBrowserRouter([
                 <Header />
                 <News
                     pageSize={pageSizeHere}
-                    country="in"
+                    country={country}
                     category="general"
-                    apiKey="dbc4762db84e44b4b6df7d41c90332ea"
+                    apiKey={apiKey}
                     key="general"
                 />
             </div>
@@ -88,9 +92,9 @@ const router = createBrowserRouter([
                 <Header />
                 <News
                     pageSize={pageSizeHere}
-                    country="in"
+                    country={country}
                     category="health"
-                    apiKey="dbc4762db84e44b4b6df7d41c90332ea"
+                    apiKey={apiKey}
                     key="health"
                 />
             </div>
@@ -104,9 +108,9 @@ const router = createBrowserRouter([
                 <Header />
                 <News
                     pageSize={pageSizeHere}
-                    country="in"
+                    country={country}
                     category="science"
-                    apiKey="dbc4762db84e44b4b6df7d41c90332ea"
+                    apiKey={apiKey}
                     key="science"
                 />
             </div>
@@ -120,9 +124,9 @@ const router = createBrowserRouter([
                 <Header />
                 <News
                     pageSize={pageSizeHere}
-                    country="in"
+                    country={country}
                     category="sports"
-                    apiKey="dbc4762db84e44b4b6df7d41c90332ea"
+                    apiKey={apiKey}
                     key="sports"
                 />
             </div>
@@ -137,9 +141,9 @@ const router = createBrowserRouter([
                 <Header />
                 <News
                     pageSize={pageSizeHere}
-                    country="in"
+                    country={country}
                     category="technology"
-                    apiKey="dbc4762db84e44b4b6df7d41c90332ea"
+                    apiKey={apiKey}
                     key="technology"
                 />
             </div>
@@ -149,7 +153,9 @@ const router = createBrowserRouter([
 ]);
 const AppRouter = () => {
     return (
-        <RouterProvider router={router} />
+        <React.StrictMode>
+            <RouterProvider router={router} />
+        </React.StrictMode>
     );
 };
 
