@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Header() {
+const NavBar = (props) => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -88,4 +88,6 @@ export default function Header() {
       </nav>
     </div>
   );
-}
+};
+
+export default NavBar;
