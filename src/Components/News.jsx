@@ -69,8 +69,12 @@ const News = (props) => {
   };
 
   const fetchMoreData = async () => {
+    let url = `http://newsapi.org/v2/top-headlines?country=${
+      props.country
+    }&category=${props.category}&apiKey=${props.apiKey}&page=${
+      page + 1
+    }&pageSize=${props.pageSize}`;
     setPage(page + 1);
-    let url = `http://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
     let data = await fetch(url);
     let parsedData = await data.json();
     setArticles(articles.concat(parsedData.articles));
@@ -80,7 +84,9 @@ const News = (props) => {
 
   return (
     <div className="container my-3">
-      <h2>NewsMonkey - Top Headlines</h2>
+      <h2 style={{ marginTop: '60px', textAlign: 'center' }}>
+        NewsMonkey - Top Headlines
+      </h2>
       {loading && <Loading />}
       <div className="row">
         {/* Control buttons  */}
